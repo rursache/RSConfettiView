@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "RSConfettiView",
-	platforms: [.iOS(.v10)],
+	platforms: [.iOS(.v9)],
     products: [
         .library(
             name: "RSConfettiView",          

@@ -8,8 +8,8 @@
 import UIKit
 import QuartzCore
 
-class RSConfettiView: UIView {
-    enum ConfettiType {
+public class RSConfettiView: UIView {
+    public enum ConfettiType {
         case confetti
         case image(UIImage)
     }
