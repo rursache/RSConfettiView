@@ -27,12 +27,12 @@ class RSConfettiView: UIView {
     var type: ConfettiType!
     private var active: Bool!
 
-    required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
 
-    override init(frame: CGRect) {
+	public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -48,7 +48,7 @@ class RSConfettiView: UIView {
         active = false
     }
 
-    func startConfetti() {
+    public func startConfetti() {
         emitter = CAEmitterLayer()
         emitter.emitterPosition = CGPoint(x: frame.size.width / 2.0, y: 0)
         emitter.emitterShape = CAEmitterLayerEmitterShape.line
@@ -64,7 +64,7 @@ class RSConfettiView: UIView {
         active = true
     }
 
-	func stopConfetti() {
+	public func stopConfetti() {
         emitter?.birthRate = 0
         active = false
     }
@@ -102,7 +102,7 @@ class RSConfettiView: UIView {
 }
 
 extension RSConfettiView {
-	static func showConfetti(inView view: UIView, type: ConfettiType = .confetti, intensity: Float = 1, duration: Double = 5, completitionHandler: (() -> Void)? = nil) {
+	public static func showConfetti(inView view: UIView, type: ConfettiType = .confetti, intensity: Float = 1, duration: Double = 5, completitionHandler: (() -> Void)? = nil) {
 		let confettiView = RSConfettiView(frame: view.bounds)
 		confettiView.intensity = intensity
 		view.addSubview(confettiView)
