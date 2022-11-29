@@ -102,9 +102,10 @@ public class RSConfettiView: UIView {
 }
 
 extension RSConfettiView {
-	public static func showConfetti(inView view: UIView, type: ConfettiType = .confetti, intensity: Float = 1, duration: Double = 5, completitionHandler: (() -> Void)? = nil) {
+	public static func showConfetti(inView view: UIView, type: ConfettiType = .confetti, intensity: Float = 1, duration: Double = 5, confettiBlocksUI: Bool = true, completitionHandler: (() -> Void)? = nil) {
 		let confettiView = RSConfettiView(frame: view.bounds)
 		confettiView.intensity = intensity
+		confettiView.isUserInteractionEnabled = confettiBlocksUI
 		view.addSubview(confettiView)
 		confettiView.startConfetti()
 		DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
