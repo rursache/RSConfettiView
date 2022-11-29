@@ -11,7 +11,7 @@ A Swift UIView with animated confetti to present success states
 import RSConfettiView
 
 func showConfetti() {
-  RSConfettiView.showConfetti(inView: UIView, type: .confetti, intensity: Float, duration: Double) {
+  RSConfettiView.showConfetti(inView: UIView, type: .confetti, intensity: Float, duration: Double, confettiBlocksUI: Bool) {
     // completition handler
   }
 }
