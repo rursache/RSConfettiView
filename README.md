@@ -7,34 +7,34 @@ A Swift UIView with animated confetti to present success states
 
 ## How to use
 1. One time use
-```
+```swift
 import RSConfettiView
 
 func showConfetti() {
-	RSConfettiView.showConfetti(inView: UIView, type: .confetti, intensity: Float, duration: Double) {
-		// completition handler
-	}
+  RSConfettiView.showConfetti(inView: UIView, type: .confetti, intensity: Float, duration: Double) {
+    // completition handler
+  }
 }
 ```
 
 2. Storyboard view / Programatic mode
-```
+```swift
 import RSConfettiView
 
 @IBOutlet private weak var confettiView: RSConfettiView!
 
 func showConfetti() {
-	self.confettiView.type = .confetti
-	self.confettiView.intensity = 10 // optional customization
-	self.confettiView.startConfetti()
+  self.confettiView.type = .confetti
+  self.confettiView.intensity = 10 // optional customization
+  self.confettiView.startConfetti()
 }
 
 func hideConfetti() {
-	self.confettiView.stopConfetti()
+  self.confettiView.stopConfetti()
 }
 
 func confettiIsActive() -> Bool {
-	return self.confettiView.isActive()
+  return self.confettiView.isActive()
 }
 ```
 
